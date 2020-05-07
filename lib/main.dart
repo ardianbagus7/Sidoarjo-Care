@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     MainPage(), PusatBantuan(),
-    MapRS() // create the pages you want to navigate between
+    RSMAP() // HOME PAGE
   ];
   @override
   Widget build(BuildContext context) {
