@@ -418,7 +418,7 @@ class _MainPageState extends State<MainPage> {
                                         style: GoogleFonts.poppins(
                                           textStyle: TextStyle(
                                               color: Color(0xFF837ACF)),
-                                          fontSize: 40,
+                                          fontSize: 35,
                                           fontStyle: FontStyle.normal,
                                           fontWeight: FontWeight.w700,
                                         ),
@@ -456,7 +456,7 @@ class _MainPageState extends State<MainPage> {
                                         style: GoogleFonts.poppins(
                                           textStyle: TextStyle(
                                               color: Color(0xFF837ACF)),
-                                          fontSize: 40,
+                                          fontSize: 35,
                                           fontStyle: FontStyle.normal,
                                           fontWeight: FontWeight.w700,
                                         ),
@@ -494,7 +494,7 @@ class _MainPageState extends State<MainPage> {
                                         style: GoogleFonts.poppins(
                                           textStyle: TextStyle(
                                               color: Color(0xFF837ACF)),
-                                          fontSize: 40,
+                                          fontSize: 35,
                                           fontStyle: FontStyle.normal,
                                           fontWeight: FontWeight.w700,
                                         ),

@@ -59,7 +59,9 @@ class _RSMAPState extends State<RSMAP> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return MaterialApp(
+        home: Scaffold(
+            body: Container(
       color: Color(0xFF5145FF),
       child: SafeArea(
         child: SizedBox.expand(
@@ -115,8 +117,7 @@ class _RSMAPState extends State<RSMAP> {
                           ),
                           child: GoogleMap(
                             initialCameraPosition: CameraPosition(
-                                target: LatLng(-7.4726, 112.667542),
-                                zoom: 12.0),
+                                target: LatLng(-7.4462, 112.7178), zoom: 12.0),
                             markers: Set<Marker>.of(allMarkers),
                             onMapCreated: mapCreated,
                           ),
@@ -126,9 +127,9 @@ class _RSMAPState extends State<RSMAP> {
                   ),
                   SizedBox.expand(
                     child: DraggableScrollableSheet(
-                      initialChildSize: 0.12,
+                      initialChildSize: 0.20,
                       minChildSize: 0.12,
-                      maxChildSize: 0.6,
+                      maxChildSize: 0.5,
                       builder: (BuildContext c, s) {
                         return Container(
                           decoration: BoxDecoration(
@@ -180,101 +181,145 @@ class _RSMAPState extends State<RSMAP> {
                                 SizedBox(
                                   height: 20.0,
                                 ),
-                                ListTile(
-                                  leading: Icon(Icons.local_hospital),
-                                  title: Wrap(
-                                    direction: Axis.vertical,
-                                    children: <Widget>[
-                                      Text(
-                                        'RSUD Sidoarjo',
-                                        style: GoogleFonts.poppins(
-                                          textStyle: TextStyle(
-                                            color: Color(0xFF180A05),
+                                Material(
+                                  color: Colors.white,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10.0)),
+                                  child: ListTile(
+                                    leading: Icon(
+                                      Icons.place,
+                                      color: Color(0xFF5145FF),
+                                    ),
+                                    title: Wrap(
+                                      direction: Axis.vertical,
+                                      children: <Widget>[
+                                        Text(
+                                          'RSUD Sidoarjo',
+                                          style: GoogleFonts.poppins(
+                                            textStyle: TextStyle(
+                                              color: Color(0xFF180A05),
+                                            ),
+                                            fontSize: 20,
+                                            fontStyle: FontStyle.normal,
+                                            fontWeight: FontWeight.w500,
                                           ),
-                                          fontSize: 20,
-                                          fontStyle: FontStyle.normal,
-                                          fontWeight: FontWeight.w500,
                                         ),
-                                      ),
-                                      Text('(031) 896164'),
-                                    ],
+                                        Text('(031) 896164'),
+                                      ],
+                                    ),
+                                    trailing: Icon(
+                                      Icons.search,
+                                      color: Color(0xFF5145FF),
+                                    ),
+                                    onTap: rs1,
                                   ),
-                                  trailing: Icon(Icons.search),
-                                  onTap: () {
-                                    print('tes');
-                                  },
                                 ),
-                                ListTile(
-                                  leading: Icon(Icons.local_hospital),
-                                  title: Wrap(
-                                    direction: Axis.vertical,
-                                    children: <Widget>[
-                                      Text(
-                                        'RS Siti Hajar',
-                                        style: GoogleFonts.poppins(
-                                          textStyle: TextStyle(
-                                            color: Color(0xFF180A05),
-                                          ),
-                                          fontSize: 20,
-                                          fontStyle: FontStyle.normal,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text('(031) 892123'),
-                                    ],
-                                  ),
-                                  trailing: Icon(Icons.search),
-                                  onTap: () {
-                                    print('tes');
-                                  },
+                                SizedBox(
+                                  height: 10.0,
                                 ),
-                                ListTile(
-                                  leading: Icon(Icons.local_hospital),
-                                  title: Wrap(
-                                    direction: Axis.vertical,
-                                    children: <Widget>[
-                                      Text(
-                                        'RS Mitra Keluarga',
-                                        style: GoogleFonts.poppins(
-                                          textStyle: TextStyle(
-                                            color: Color(0xFF180A05),
-                                          ),
-                                          fontSize: 20,
-                                          fontStyle: FontStyle.normal,
-                                          fontWeight: FontWeight.w500,
-                                        ),
+                                Material(
+                                  color: Colors.white,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10.0)),
+                                  child: ListTile(
+                                      leading: Icon(
+                                        Icons.place,
+                                        color: Color(0xFF5145FF),
                                       ),
-                                      Text('(031) 854211'),
-                                    ],
-                                  ),
-                                  trailing: Icon(Icons.search),
-                                  onTap: () {
-                                    print('tes');
-                                  },
+                                      title: Wrap(
+                                        direction: Axis.vertical,
+                                        children: <Widget>[
+                                          Text(
+                                            'RS Siti Hajar',
+                                            style: GoogleFonts.poppins(
+                                              textStyle: TextStyle(
+                                                color: Color(0xFF180A05),
+                                              ),
+                                              fontSize: 20,
+                                              fontStyle: FontStyle.normal,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                          Text('(031) 892123'),
+                                        ],
+                                      ),
+                                      trailing: Icon(
+                                        Icons.search,
+                                        color: Color(0xFF5145FF),
+                                      ),
+                                      onTap: rs2),
                                 ),
-                                ListTile(
-                                  leading: Icon(Icons.local_hospital),
-                                  title: Wrap(
-                                    direction: Axis.vertical,
-                                    children: <Widget>[
-                                      Text(
-                                        'RS Anwar Medika',
-                                        style: GoogleFonts.poppins(
-                                          textStyle: TextStyle(
-                                            color: Color(0xFF180A05),
+                                SizedBox(
+                                  height: 10.0,
+                                ),
+                                Material(
+                                  color: Colors.white,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10.0)),
+                                  child: ListTile(
+                                    leading: Icon(
+                                      Icons.place,
+                                      color: Color(0xFF5145FF),
+                                    ),
+                                    title: Wrap(
+                                      direction: Axis.vertical,
+                                      children: <Widget>[
+                                        Text(
+                                          'RS Mitra Keluarga',
+                                          style: GoogleFonts.poppins(
+                                            textStyle: TextStyle(
+                                              color: Color(0xFF180A05),
+                                            ),
+                                            fontSize: 20,
+                                            fontStyle: FontStyle.normal,
+                                            fontWeight: FontWeight.w500,
                                           ),
-                                          fontSize: 20,
-                                          fontStyle: FontStyle.normal,
-                                          fontWeight: FontWeight.w500,
                                         ),
-                                      ),
-                                      Text('(031) 897205'),
-                                    ],
+                                        Text('(031) 854211'),
+                                      ],
+                                    ),
+                                    trailing: Icon(
+                                      Icons.search,
+                                      color: Color(0xFF5145FF),
+                                    ),
+                                    onTap: rs3,
                                   ),
-                                  trailing: Icon(Icons.search),
-                                  onTap: () {
-                                    print('tes');
-                                  },
+                                ),
+                                SizedBox(
+                                  height: 10.0,
+                                ),
+                                Material(
+                                  color: Colors.white,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10.0)),
+                                  child: ListTile(
+                                    leading: Icon(
+                                      Icons.place,
+                                      color: Color(0xFF5145FF),
+                                    ),
+                                    title: Wrap(
+                                      direction: Axis.vertical,
+                                      children: <Widget>[
+                                        Text(
+                                          'RS Anwar Medika',
+                                          style: GoogleFonts.poppins(
+                                            textStyle: TextStyle(
+                                              color: Color(0xFF180A05),
+                                            ),
+                                            fontSize: 20,
+                                            fontStyle: FontStyle.normal,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                        ),
+                                        Text('(031) 897205'),
+                                      ],
+                                    ),
+                                    trailing: Icon(
+                                      Icons.search,
+                                      color: Color(0xFF5145FF),
+                                    ),
+                                    onTap: rs4,
+                                  ),
                                 )
                               ],
                             ),
@@ -289,9 +334,9 @@ class _RSMAPState extends State<RSMAP> {
           ),
         ),
       ),
-    );
+    )));
   }
-
+  
   void mapCreated(controller) {
     setState(() {
       _controller = controller;
@@ -300,25 +345,25 @@ class _RSMAPState extends State<RSMAP> {
 
   rs1() {
     _controller.animateCamera(CameraUpdate.newCameraPosition(
-      CameraPosition(target: LatLng(-7.4654, 112.7164), zoom: 10.0),
+      CameraPosition(target: LatLng(-7.4654, 112.7164), zoom: 17.0),
     ));
   }
 
   rs2() {
     _controller.animateCamera(CameraUpdate.newCameraPosition(
-      CameraPosition(target: LatLng(-7.4576, 112.7219), zoom: 10.0),
+      CameraPosition(target: LatLng(-7.4576, 112.7219), zoom: 17.0),
     ));
   }
 
   rs3() {
     _controller.animateCamera(CameraUpdate.newCameraPosition(
-      CameraPosition(target: LatLng(-7.3626, 112.7286), zoom: 10.0),
+      CameraPosition(target: LatLng(-7.3626, 112.7286), zoom: 17.0),
     ));
   }
 
   rs4() {
     _controller.animateCamera(CameraUpdate.newCameraPosition(
-      CameraPosition(target: LatLng(-7.4096, 112.5570), zoom: 10.0),
+      CameraPosition(target: LatLng(-7.4096, 112.5570), zoom: 17.0),
     ));
   }
 }

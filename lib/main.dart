@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'pages/pusatbantuan.dart';
-import 'pages/mapRS.dart';
 import 'pages/MainPage.dart';
+import 'pages/pusatinformasi.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,10 +19,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int _currentIndex = 0;
-  final List<Widget> _children = [
-    MainPage(), PusatBantuan(),
-    RSMAP() // HOME PAGE
+  int _currentIndex = 1;
+  final List<Widget> _children = [BantuanPAGE(),
+    MainPage(), 
+    PusatInformasi() // HOME PAGE
   ];
   @override
   Widget build(BuildContext context) {
@@ -32,23 +32,24 @@ class _MyAppState extends State<MyApp> {
         body: _children[_currentIndex],
         bottomNavigationBar: CurvedNavigationBar(
             color: Colors.white,
+            index: 1,
             buttonBackgroundColor: Colors.white,
             backgroundColor: Color(0xFFF1F4FC),
             height: 50,
             items: <Widget>[
               Icon(
+                Icons.phone,
+                size: 25,
+                color: Color(0xFF5145FF),
+              ),
+              Icon(
                 Icons.home,
-                size: 20,
+                size: 25,
                 color: Color(0xFF5145FF),
               ),
               Icon(
-                Icons.info,
-                size: 20,
-                color: Color(0xFF5145FF),
-              ),
-              Icon(
-                Icons.help,
-                size: 20,
+                Icons.list,
+                size: 25,
                 color: Color(0xFF5145FF),
               ),
             ],
