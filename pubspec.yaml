@@ -33,6 +33,11 @@ dependencies:
   simple_animations: ^2.2.0
   flutter_native_splash: ^0.1.9
   flutter_launcher_icons: ^0.7.5
+  shimmer: ^1.1.1
+  geolocator: ^5.3.1
+  permission_handler: ^4.4.0+hotfix.2
+  android_intent: ^0.3.7+2
+  smooth_page_indicator: ^0.1.5
   
   
 
@@ -55,7 +60,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   # assets:
   assets:
-   - assets/images/
+   - lib/images/
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -68,20 +73,20 @@ flutter:
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
-  # example:
-  fonts:
-    - family: Roboto
-      fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf
-        - asset: assets/fonts/Roboto-Bold.ttf
-          weight: 700
-    - family: Poppins
-      fonts:
-        - asset: assets/fonts/Poppins-Regular.ttf
-    - family: Kanit
-      fonts:
-        - asset: assets/fonts/Kanit-SemiBold.ttf
-          weight: 500
+  # # example:
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: assets/fonts/Roboto-Regular.ttf
+  #       - asset: assets/fonts/Roboto-Bold.ttf
+  #         weight: 700
+  #   - family: Poppins
+  #     fonts:
+  #       - asset: assets/fonts/Poppins-Regular.ttf
+  #   - family: Kanit
+  #     fonts:
+  #       - asset: assets/fonts/Kanit-SemiBold.ttf
+  #         weight: 500
   # fonts:
   #   - family: Schyler
   #     fonts:

@@ -1,17 +1,17 @@
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:sidoarjocovid/screens/aboutApp_page.dart';
+import 'package:sidoarjocovid/utilities/FadeIn.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'mapRS.dart';
-import 'package:sidoarjocovid/Animation/FadeIn.dart';
-import 'aboutapp.dart';
+import 'rsMap_page.dart';
 
-class BantuanPAGE extends StatefulWidget {
+class BantuanPage extends StatefulWidget {
   @override
-  _BantuanPAGEState createState() => _BantuanPAGEState();
+  _BantuanPageState createState() => _BantuanPageState();
 }
 
-class _BantuanPAGEState extends State<BantuanPAGE> {
+class _BantuanPageState extends State<BantuanPage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -29,7 +29,7 @@ class _BantuanPAGEState extends State<BantuanPAGE> {
                       height: 10.0,
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal:15.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -504,7 +504,7 @@ class _Container1State extends State<Container1> {
                       leading: CircleAvatar(
                         backgroundColor: Color(0xFFAC9EC6),
                         backgroundImage:
-                            ExactAssetImage('assets/images/Hospital.png'),
+                            ExactAssetImage('lib/images/Hospital.png'),
                       ),
                       title: Text(
                         'Rumah Sakit Rujukan',

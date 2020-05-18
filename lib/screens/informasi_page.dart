@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sidoarjocovid/screens/aboutApp_page.dart';
+import 'package:sidoarjocovid/utilities/FadeIn.dart';
 import 'package:simple_animations/simple_animations.dart';
-import 'aboutapp.dart';
-import 'package:sidoarjocovid/Animation/FadeIn.dart';
-import 'dart:math' as math;
 
-class PusatInformasi extends StatelessWidget {
+class InformasiPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -22,7 +21,7 @@ class PusatInformasi extends StatelessWidget {
                     height: 10.0,
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal:15.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -203,7 +202,7 @@ class Container1 extends StatelessWidget {
                                         decoration: BoxDecoration(
                                           image: DecorationImage(
                                             image: AssetImage(
-                                                'assets/images/gejala$i.png'),
+                                                'lib/images/gejala$i.png'),
                                           ),
                                         ),
                                       ),
@@ -319,7 +318,7 @@ class Container1 extends StatelessWidget {
                                         decoration: BoxDecoration(
                                           image: DecorationImage(
                                             image: AssetImage(
-                                                'assets/images/pasien$j.png'),
+                                                'lib/images/pasien$j.png'),
                                           ),
                                         ),
                                       ),

@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:sidoarjocovid/provider/indonesia_provider.dart';
+import 'package:sidoarjocovid/provider/radar_provider.dart';
+import 'package:sidoarjocovid/provider/sidoarjo_provider.dart';
+import 'package:sidoarjocovid/screens/Home_Page.dart';
+import 'package:sidoarjocovid/screens/bantuan_page.dart';
+import 'package:sidoarjocovid/screens/informasi_page.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'pages/pusatbantuan.dart';
-import 'pages/MainPage.dart';
-import 'pages/pusatinformasi.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]).then((_) {
-    runApp(MyApp());
-  });
-}
+void main() => runApp(MultiProvider(providers: [
+      ChangeNotifierProvider(create: (_) => SidoarjoProvider()),
+      ChangeNotifierProvider(create: (_) => IndonesiaProvider()),
+      ChangeNotifierProvider(create: (_) => RadarProvider()),
+    ], child: MyApp()));
 
 class MyApp extends StatefulWidget {
   @override
@@ -20,9 +21,10 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int _currentIndex = 1;
-  final List<Widget> _children = [BantuanPAGE(),
-    MainPage(), 
-    PusatInformasi() // HOME PAGE
+  final List<Widget> _children = [
+    BantuanPage(),
+    HomePage(),
+    InformasiPage() // HOME PAGE
   ];
   @override
   Widget build(BuildContext context) {

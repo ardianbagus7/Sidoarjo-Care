@@ -336,7 +336,7 @@ class _RSMAPState extends State<RSMAP> {
       ),
     )));
   }
-  
+
   void mapCreated(controller) {
     setState(() {
       _controller = controller;

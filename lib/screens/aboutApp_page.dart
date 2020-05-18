@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sidoarjocovid/Animation/FadeIn.dart';
+import 'package:sidoarjocovid/utilities/FadeIn.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutApp extends StatelessWidget {
@@ -9,111 +9,114 @@ class AboutApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Container(
-          color: Color(0xFF5145FF),
-          child: SafeArea(
-            child: SizedBox.expand(
-              child: Stack(
-                children: <Widget>[
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          IconButton(
-                            icon: Icon(
-                              Icons.keyboard_arrow_left,
-                              size: 40.0,
-                            ),
-                            color: Colors.white,
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                          ),
-                          Text(
-                            'About Apps',
-                            style: GoogleFonts.poppins(
-                              textStyle: TextStyle(color: Colors.white),
-                              fontSize: 20,
-                              fontStyle: FontStyle.normal,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          SizedBox(width: 50.0)
-                        ],
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
-                      Expanded(
-                        child: Container(
-                          height: double.infinity,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Color(0xFFF1F4FC),
-                            borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(40.0),
-                              topLeft: Radius.circular(40.0),
-                            ),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                height: 40.0,
+        body: SingleChildScrollView(
+          child: Container(
+            height: 1000.0,
+            color: Color(0xFF5145FF),
+            child: SafeArea(
+              child: SizedBox.expand(
+                child: Stack(
+                  children: <Widget>[
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            IconButton(
+                              icon: Icon(
+                                Icons.keyboard_arrow_left,
+                                size: 40.0,
                               ),
-                              FadeIn(
-                                1.0,
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 25.0, right: 25.0),
-                                  child: Text(
-                                    'Tentang Developer',
-                                    style: GoogleFonts.poppins(
-                                      textStyle: TextStyle(
-                                        color: Color(0xFF180A05),
+                              color: Colors.white,
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                            Text(
+                              'About Apps',
+                              style: GoogleFonts.poppins(
+                                textStyle: TextStyle(color: Colors.white),
+                                fontSize: 20,
+                                fontStyle: FontStyle.normal,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            SizedBox(width: 50.0)
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Expanded(
+                          child: Container(
+                            height: double.infinity,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Color(0xFFF1F4FC),
+                              borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(40.0),
+                                topLeft: Radius.circular(40.0),
+                              ),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 40.0,
+                                ),
+                                FadeIn(
+                                  1.0,
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 25.0, right: 25.0),
+                                    child: Text(
+                                      'Tentang Developer',
+                                      style: GoogleFonts.poppins(
+                                        textStyle: TextStyle(
+                                          color: Color(0xFF180A05),
+                                        ),
+                                        fontSize: 20,
+                                        fontStyle: FontStyle.normal,
+                                        fontWeight: FontWeight.w700,
                                       ),
-                                      fontSize: 20,
-                                      fontStyle: FontStyle.normal,
-                                      fontWeight: FontWeight.w700,
                                     ),
                                   ),
                                 ),
-                              ),
-                              FadeIn(
-                                2.0,
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 25.0, right: 25.0),
-                                  child: Text(
-                                    'Aplikasi ini dibuat untuk memudahkan warga sidoarjo memantau kondisi perkembangan Covid-19 yang terjadi',
-                                    style: GoogleFonts.poppins(
-                                      textStyle: TextStyle(
-                                        color: Color(0xFF180A05),
+                                FadeIn(
+                                  2.0,
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 25.0, right: 25.0),
+                                    child: Text(
+                                      'Aplikasi ini dibuat untuk memudahkan warga sidoarjo memantau kondisi perkembangan Covid-19 yang terjadi',
+                                      style: GoogleFonts.poppins(
+                                        textStyle: TextStyle(
+                                          color: Color(0xFF180A05),
+                                        ),
+                                        fontSize: 15,
+                                        fontStyle: FontStyle.normal,
+                                        fontWeight: FontWeight.w300,
                                       ),
-                                      fontSize: 15,
-                                      fontStyle: FontStyle.normal,
-                                      fontWeight: FontWeight.w300,
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 20.0,
-                              ),
-                              Info(),
-                            ],
+                                SizedBox(
+                                  height: 20.0,
+                                ),
+                                Info(),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -197,7 +200,7 @@ class _InfoState extends State<Info> {
                             width: 50.0,
                             decoration: BoxDecoration(
                               image: new DecorationImage(
-                                image: AssetImage('assets/images/Gmail.png'),
+                                image: AssetImage('lib/images/Gmail.png'),
                               ),
                             ),
                           ),
@@ -214,7 +217,7 @@ class _InfoState extends State<Info> {
                             decoration: BoxDecoration(
                               image: new DecorationImage(
                                 image:
-                                    AssetImage('assets/images/instagram.png'),
+                                    AssetImage('lib/images/instagram.png'),
                               ),
                             ),
                           ),
@@ -230,7 +233,7 @@ class _InfoState extends State<Info> {
                             width: 50.0,
                             decoration: BoxDecoration(
                               image: new DecorationImage(
-                                image: AssetImage('assets/images/linkedin.png'),
+                                image: AssetImage('lib/images/linkedin.png'),
                               ),
                             ),
                           ),
